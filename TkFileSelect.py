@@ -3,12 +3,15 @@
 #参考：https://www.cnblogs.com/baijifeilong/p/3707393.html
 import tkinter
 from tkinter import filedialog
+from CutOne import *
 
 def openfile():
     r = filedialog.askopenfilename(title='打开文件')
+    cutPicLogin(r);
+    cropLogin2();
     print(r)
 def savefile():
-    r = filedialog.asksaveasfilename(title='保存文件', initialdir='d:\mywork', initialfile='hello.py')
+    r = filedialog.asksaveasfilename(title='保存文件', initialdir='E:\pic', initialfile='hello.jpg')
     print(r)
 
 root = tkinter.Tk()

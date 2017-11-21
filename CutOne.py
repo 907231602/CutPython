@@ -12,13 +12,13 @@ print("图片宽度和高度分别是{}".format(img_size))
 '''
 
 #截取登录界面块
-def cutPicLogin():
+def cutPicLogin(picPath):
     x =782
     y =113
     w =292
     h =460
     region = im.crop((x, y, x + w, y + h))
-    region.save("pic\loginTable.png")
+    region.save("pic\loginTable2.png")
 
 
 #登录界面分块，version1,只能实现单个
@@ -37,7 +37,7 @@ def cropLogin():
 
 #登录界面分块，version2，for循环分块
 def cropLogin2():
-    im=Image.open("pic\loginTable.png");
+    im=Image.open("pic\loginTable2.png");
     im_size=im.size;
     print("login图片宽度和高度分别是{}".format(im_size));
     #把图片平均分成10块
@@ -49,7 +49,7 @@ def cropLogin2():
     for i in range(10): #循环长度10次
         for j in range(2):  #循环宽度2次
             region = im.crop((x, y, x + w, y + h))
-            region.save("pic\crop_average-%d-%d.png" % (i,j));
+            region.save("pic\crop_average2-%d-%d.png" % (i,j));
             x=x+w;
             y=y;
         x=0                 #高依次增加，宽度从0~~边界值
