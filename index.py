@@ -1,6 +1,7 @@
 # coding=utf-8
 __author__ = 'syq'
 #ocr：光学字符识别
+#遍历裁剪好的图片，识别文字内容，效果不是特别理想
 #https://github.com/tesseract-ocr
 import sys
 import importlib

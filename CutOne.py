@@ -21,7 +21,7 @@ def cutPicLogin():
     region.save("pic\loginTable.png")
 
 
-#登录界面分块
+#登录界面分块，version1,只能实现单个
 def cropLogin():
     im=Image.open("pic\loginTable.png");
     im_size=im.size;
@@ -35,7 +35,7 @@ def cropLogin():
     region = im.crop((x, y, x + w, y + h))
     region.save("pic\crop_average-1.png")
 
-#登录界面分块
+#登录界面分块，version2，for循环分块
 def cropLogin2():
     im=Image.open("pic\loginTable.png");
     im_size=im.size;
@@ -52,7 +52,7 @@ def cropLogin2():
             region.save("pic\crop_average-%d-%d.png" % (i,j));
             x=x+w;
             y=y;
-        x=0
+        x=0                 #高依次增加，宽度从0~~边界值
         y=y+h;
 
 if __name__ == "__main__":
